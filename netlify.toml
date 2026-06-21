@@ -1,6 +1,5 @@
 [build]
   publish = "."
-  command = "echo 'Static site, no build needed'"
 
 [[headers]]
   for = "/*"
@@ -8,3 +7,25 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Redirect old .dc.html paths (in case any external links exist)
+[[redirects]]
+  from = "/Little Concerts.dc.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/Datenschutz.dc.html"
+  to = "/datenschutz.html"
+  status = 301
+
+[[redirects]]
+  from = "/Impressum.dc.html"
+  to = "/impressum.html"
+  status = 301
+
+# Cache assets aggressively
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
