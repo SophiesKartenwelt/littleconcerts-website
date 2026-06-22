@@ -336,7 +336,7 @@
       <img src="assets/decorative_divider.png" alt="" style="width:280px;max-width:80%;opacity:.85;margin-bottom:18px">
       <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:28px;color:#463f35;margin-bottom:6px">Little Concerts</div>
       <p style="font-size:14.5px;color:#8a7f6c;margin-bottom:4px">{{ t.footerTag }}</p>
-      <p style="font-size:14px;color:#a89c84">littleconcerts.de · München-Moosach · {{ t.footerGroup }}</p>
+      <p style="font-size:14px;color:#a89c84">littleconcerts.de · München-Moosach · <a href="{{ groupLink }}" target="_blank" rel="noopener" style="color:#7c9069;font-weight:600;text-decoration:underline">{{ t.footerGroup }}</a></p>
       <div style="display:flex;gap:20px;justify-content:center;margin-top:16px">
         <a href="musiker.html" style="font-size:13.5px;color:#7c9069;font-weight:600;text-decoration:none;border-bottom:1px solid #ccd6c0;padding-bottom:1px">{{ t.navMusiker }}</a>
         <a href="datenschutz.html" style="font-size:13.5px;color:#7c9069;font-weight:600;text-decoration:none;border-bottom:1px solid #ccd6c0;padding-bottom:1px">{{ t.navPrivacy }}</a>
@@ -473,6 +473,7 @@ const DATA = {
 
 const WA_NUMBER = "4915200000000"; // placeholder, replace with the real number
 const WA_DISPLAY = "+49 152 0000 0000";
+const WA_GROUP_LINK = "https://chat.whatsapp.com/PLACEHOLDER"; // replace with real group link
 
 class Component extends DCLogic {
   state = { lang: null };
@@ -536,7 +537,7 @@ class Component extends DCLogic {
       setEn: () => this.setState({ lang:"en" }),
       features, bringItems, steps, nextDates, faqGroups,
       heroSubNode, conceptParas, signupBodyNode,
-      waLink, waDisplay: WA_DISPLAY
+      waLink, waDisplay: WA_DISPLAY, groupLink: WA_GROUP_LINK
     };
   }
 }
