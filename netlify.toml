@@ -24,6 +24,11 @@
   to = "/impressum.html"
   status = 301
 
+[[redirects]]
+  from = "/fuer-musiker"
+  to = "/musiker.html"
+  status = 301
+
 # Cache assets aggressively
 [[headers]]
   for = "/assets/*"
