@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Little Concerts — Klassische Musik für die Kleinsten</title>
+<title>Little Concerts · Klassische Musik für die Kleinsten</title>
 <meta name="description" content="Kurze Gartenkonzerte mit klassischer Musik für Familien mit Babys von 0 bis 2 Jahren. München-Moosach.">
-<meta property="og:title" content="Little Concerts — Klassische Musik für die Kleinsten">
+<meta property="og:title" content="Little Concerts · Klassische Musik für die Kleinsten">
 <meta property="og:description" content="Kurze Gartenkonzerte mit klassischer Musik für Familien mit Babys von 0 bis 2 Jahren. München-Moosach.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.littleconcerts.de">
@@ -31,6 +31,10 @@
   /* === RESPONSIVE === */
   @media(max-width:900px){
     .lc-nav-link{display:none!important}
+    .lc-nav{padding:10px 16px!important}
+    .lc-nav a[href="#signup"]{padding:8px 14px!important;font-size:13px!important}
+    .lc-lang-toggle{margin-left:6px!important;font-size:12px!important}
+    .lc-lang-toggle button{padding:6px 10px!important;font-size:12px!important}
     .lc-hero-grid{grid-template-columns:1fr!important;text-align:center;padding:40px 20px 50px!important;gap:24px!important}
     .lc-hero-grid h1{font-size:46px!important}
     .lc-hero-ctas{justify-content:center}
@@ -105,7 +109,7 @@
         <a href="#bring" style="text-decoration:none;font-size:14.5px;font-weight:600;color:#6b6051;padding:8px 14px;border-radius:999px;transition:background .15s,color .15s" class="lc-nav-link" style-hover="background:#edf0e6;color:#3f4a35">{{ t.navBring }}</a>
         <a href="#faq" style="text-decoration:none;font-size:14.5px;font-weight:600;color:#6b6051;padding:8px 14px;border-radius:999px;transition:background .15s,color .15s" class="lc-nav-link" style-hover="background:#edf0e6;color:#3f4a35">{{ t.navFaq }}</a>
         <a href="#signup" style="text-decoration:none;font-size:14.5px;font-weight:700;color:#fff;background:#7c9069;padding:9px 18px;border-radius:999px;margin-left:6px;transition:background .15s" style-hover="background:#6b7d5a">{{ t.navSignup }}</a>
-        <div style="display:flex;align-items:center;border:1px solid #d8caa6;border-radius:999px;overflow:hidden;font-weight:700;font-size:13px;margin-left:10px">
+        <div class="lc-lang-toggle" style="display:flex;align-items:center;border:1px solid #d8caa6;border-radius:999px;overflow:hidden;font-weight:700;font-size:13px;margin-left:10px;flex-shrink:0">
           <button onClick="{{ setDe }}" style="{{ deBtnStyle }}">DE</button>
           <button onClick="{{ setEn }}" style="{{ enBtnStyle }}">EN</button>
         </div>
