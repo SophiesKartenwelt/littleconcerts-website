@@ -34,8 +34,7 @@
     .lc-nav{padding:10px 14px!important;gap:10px!important}
     .lc-nav .lc-logo-text{font-size:20px!important}
     .lc-nav a[href="#signup"]{padding:7px 12px!important;font-size:12.5px!important;margin-left:0!important}
-    .lc-lang-toggle{margin-left:4px!important}
-    .lc-lang-toggle button{padding:5px 8px!important;font-size:11.5px!important}
+    
     .lc-hero-grid{grid-template-columns:1fr!important;text-align:center;padding:40px 20px 50px!important;gap:24px!important}
     .lc-hero-grid h1{font-size:46px!important}
     .lc-hero-ctas{justify-content:center}
@@ -109,10 +108,7 @@
         <a href="#bring" style="text-decoration:none;font-size:14.5px;font-weight:600;color:#6b6051;padding:8px 14px;border-radius:999px;transition:background .15s,color .15s" class="lc-nav-link" style-hover="background:#edf0e6;color:#3f4a35">{{ t.navBring }}</a>
         <a href="#faq" style="text-decoration:none;font-size:14.5px;font-weight:600;color:#6b6051;padding:8px 14px;border-radius:999px;transition:background .15s,color .15s" class="lc-nav-link" style-hover="background:#edf0e6;color:#3f4a35">{{ t.navFaq }}</a>
         <a href="#signup" style="text-decoration:none;font-size:14.5px;font-weight:700;color:#fff;background:#7c9069;padding:9px 18px;border-radius:999px;margin-left:6px;transition:background .15s" style-hover="background:#6b7d5a">{{ t.navSignup }}</a>
-        <div class="lc-lang-toggle" style="display:flex;align-items:center;border:1px solid #d8caa6;border-radius:999px;overflow:hidden;font-weight:700;font-size:13px;margin-left:10px;flex-shrink:0">
-          <button onClick="{{ setDe }}" style="{{ deBtnStyle }}">DE</button>
-          <button onClick="{{ setEn }}" style="{{ enBtnStyle }}">EN</button>
-        </div>
+        
       </nav>
     </div>
   </header>
@@ -285,7 +281,7 @@
         <a href="{{ signupLink }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:11px;background:#7c9069;color:#fff;font-weight:700;font-size:17px;padding:18px 36px;border-radius:999px;text-decoration:none;box-shadow:0 16px 30px -14px rgba(124,144,105,.85)">
           <span style="font-size:19px">📋</span>{{ t.signupBtn }}
         </a>
-
+        <p style="margin-top:18px;font-size:14px;color:#7a715f">💬 <a href="{{ groupLink }}" target="_blank" rel="noopener" style="color:#7c9069;font-weight:600;text-decoration:underline;text-underline-offset:2px">{{ t.communityHint }}</a></p>
       </div>
     </section>
 
@@ -325,14 +321,14 @@
     </section>
 
     <!-- WHATSAPP COMMUNITY -->
-    <section style="position:relative;background:#edf0e6;padding:60px 28px;overflow:hidden">
-      <img src="assets/bg_watercolor_sage_green.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.25;pointer-events:none">
+    <section id="community" style="position:relative;background:#f7f2e6;padding:70px 28px;overflow:hidden">
+      <img src="assets/bg_watercolor_sage_green.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.12;pointer-events:none">
       <div style="position:relative;max-width:560px;margin:0 auto;text-align:center">
-        <div style="font-size:40px;margin-bottom:10px">💬</div>
+        <img src="assets/decorative_divider.png" alt="" style="width:180px;max-width:60%;opacity:.7;margin-bottom:18px">
         <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:34px;color:#3f4a35;margin-bottom:10px">{{ t.communityTitle }}</h2>
-        <p style="font-size:16px;color:#5c5347;margin-bottom:24px;line-height:1.55">{{ t.communityBody }}</p>
-        <a href="{{ groupLink }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-weight:700;font-size:16px;padding:15px 30px;border-radius:999px;text-decoration:none;box-shadow:0 10px 24px -10px rgba(37,211,102,.5)">
-          <span style="font-size:18px">📱</span>{{ t.communityBtn }}
+        <p style="font-size:16px;color:#6b6051;margin-bottom:28px;line-height:1.6">{{ t.communityBody }}</p>
+        <a href="{{ groupLink }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#7c9069;color:#fff;font-weight:700;font-size:16px;padding:15px 32px;border-radius:999px;text-decoration:none;box-shadow:0 8px 20px -8px rgba(124,144,105,.45);transition:background .2s" onmouseover="this.style.background='#6b7d5a'" onmouseout="this.style.background='#7c9069'">
+          <span style="font-size:17px">💬</span>{{ t.communityBtn }}
         </a>
       </div>
     </section>
@@ -355,68 +351,6 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:900},&quot;defaultLang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;de&quot;,&quot;en&quot;],&quot;default&quot;:&quot;de&quot;,&quot;tsType&quot;:&quot;'de'|'en'&quot;}}">
 const DATA = {
-  de: {
-    navConcept:"Konzept", navDate:"Termin", navBring:"Mitbringen", navFaq:"FAQ", navSignup:"Anmeldung",
-    navPrivacy:"Datenschutz", navImprint:"Impressum", navMusiker:"Für Musiker",
-    heroScript:"klein, aber fein",
-    heroSub:"Kurze Konzerte im Garten, für euch und eure **Babys von 0 bis 2 Jahren**. Die Musik bringt uns zusammen, die Kleinen spielen, und ihr lernt ganz nebenbei **andere Familien** kennen.",
-    ctaPrimary:"Jetzt anmelden", ctaSecondary:"So läuft's ab",
-    conceptEyebrow:"Das machen wir", conceptTitle:"Babyfreundliche Konzerte.",
-    conceptBody:[
-      "Bei uns kommen junge Familien über **klassische Musik** zusammen, ganz entspannt und **ohne steife Konzertregeln**. Schreien, Stillen, Krabbeln: bei uns ist das alles völlig normal.",
-      "Und wenn das letzte Stück verklungen ist, bleibt gern noch da. Die Kinder spielen, wir Eltern kommen in Ruhe ins Gespräch."
-    ],
-    features:[
-      {title:"Gemeinsam", body:"Die Musik bringt uns alle zusammen. Lernt ganz entspannt andere Familien aus der Nähe kennen."},
-      {title:"Entspannt", body:"Krabbeldecke statt Konzertsaal. Kommt einfach so, wie ihr seid."},
-      {title:"Im Garten", body:"Kurze, kleine Wohlfühlmomente unter freiem Himmel, in einem privaten Garten mit Terrasse."}
-    ],
-    dateEyebrow:"Nächster Termin", dateTitle:"Wir sehen uns im Garten",
-    dateWhen:"So, 12. Juli 2026", dateTime:"10:00 Uhr", datePlace:"München-Moosach", datePerformer:"Mit einer Opernsängerin",
-    dateAddrLabel:"Privater Garten", dateAddrNote:"den genauen Treffpunkt schicken wir euch nach der Anmeldung.",
-    dateWeather:"Bei schlechtem Wetter ziehen wir einfach ins Wohnzimmer um.",
-    dateGetting:"Parken könnt ihr am Straßenende, Fahrräder stellt ihr direkt im Garten ab. Mit dem Bus 169 ab Bahnhof Moosach seid ihr in einem Kilometer da, sonntags fährt er alle 20 Minuten.",
-    dateSeatsNum:"5 bis 8", dateSeatsLabel:"Familien", datePriceNum:"20 €", datePriceLabel:"pro Erwachsenem",
-    dateKidsFree:"Kinder kostenlos",
-    dateRefund:"Wenn etwas dazwischenkommt: Bis 24 Stunden vor dem Konzert bekommt ihr euer Geld zurück.",
-    priceExample:"Zwei Erwachsene mit Baby zahlen zusammen 40 €.",
-    priceNote:"Für uns ist das ein kleines Herzensprojekt. Wir verdienen nichts daran, der komplette Beitrag geht an die Musikerin.",
-    exampleLabel:"Beispiel",
-    noteTitle:"Nächster Termin", notePlace:"Privater Garten · München-Moosach",
-    nextDates:[{date:"So · 12. Juli", time:"10:00"}],
-    bringEyebrow:"Mitbringen", bringTitle:"Was ihr mitbringt",
-    bringItems:[{label:"Eure Lieblings-Krabbeldecke oder eine Picknickdecke"},{label:"Etwas zu trinken, gern auch ein paar Snacks"},{label:"Alles fürs Wickeln"}],
-    bringNote:"Bodenkissen und ein paar Snacks haben wir schon für euch da. Den Rest macht ihr euch einfach gemütlich.",
-    signupEyebrow:"Anmeldung", signupTitle:"Sichert euch einen Platz",
-    signupBody:"Tragt euch einfach in unser **Anmeldeformular** ein und bezahlt per **PayPal**. Sobald die Zahlung da ist, ist euer **Platz sicher** und ihr bekommt die genaue Adresse von uns.",
-    steps:[
-      {text:"Tragt euch im Anmeldeformular ein: Name, Anzahl Erwachsene und Kinder."},
-      {text:"Bezahlt bequem per PayPal, 20 € pro Erwachsenem."},
-      {text:"Wir bestätigen euren Platz und schicken euch die Adresse."}
-    ],
-    signupBtn:"Jetzt anmelden",
-    faqEyebrow:"Häufige Fragen", faqTitle:"Gut zu wissen",
-    faqGroups:[
-      {icon:"♪", title:"Das Konzert", items:[
-        {q:"Für wen ist es und kommen Geschwister mit?", a:"Für eure Kleinsten von 0 bis 2 Jahren. Ein Geschwisterchen in ähnlichem Alter oder jünger darf gern mit dabei sein."},
-        {q:"Wie lange dauert es und darf ich danach bleiben?", a:"Das Konzert selbst ist schön kurz, etwa 30 Minuten. Danach bleibt gern noch: Die Kinder spielen, wir Eltern quatschen, alle kommen in Ruhe an."},
-        {q:"Was, wenn mein Baby schreit oder laut ist?", a:"Mach dir keine Sorgen. Schreien, Stillen und kleine Zwischengeräusche gehören bei uns einfach dazu und sind herzlich willkommen."},
-        {q:"In welcher Sprache läuft das Konzert?", a:"Da internationale Familien dabei sind, sprechen wir Englisch."}
-      ]},
-      {icon:"€", title:"Anmeldung und Kosten", items:[
-        {q:"Wie melde ich mich an und was kostet es?", a:"Tragt euch einfach in unser Anmeldeformular ein und bezahlt per PayPal. Es kostet 20 € pro Erwachsenem, Kinder sind kostenlos. Zwei Erwachsene mit Baby zahlen also 40 €. Sobald eure Zahlung da ist, ist euer Platz fest gebucht."},
-        {q:"Wie läuft die Erstattung bei einer Absage?", a:"Wenn ihr bis 24 Stunden vor dem Konzert absagt, bekommt ihr den vollen Betrag zurück. Ganz unkompliziert."}
-      ]},
-      {icon:"❖", title:"Ort und Anreise", items:[
-        {q:"Wo findet das Konzert statt?", a:"In einem privaten Garten in München-Moosach. Die genaue Adresse schicken wir euch nach der Anmeldung."},
-        {q:"Was soll ich mitbringen?", a:"Eine eigene Krabbeldecke, etwas zu trinken und eure Wickelsachen. Bodenkissen, eine Wickelauflage und ein paar Snacks haben wir vor Ort für euch."},
-        {q:"Kinderwagen, Parken und Anreise?", a:"Eure Kinderwagen stehen hinten im Garten, bei Regen in der Garage. Parken könnt ihr auf einem kleinen Parkplatz am Straßenende, Fahrräder kommen direkt in den Garten. Der Bus 169 fährt ab Bahnhof Moosach, sonntags alle 20 Minuten."},
-        {q:"Was ist bei schlechtem Wetter?", a:"Das Konzert findet trotzdem statt! Bei Regen ziehen wir einfach ins Wohnzimmer um."}
-      ]}
-    ],
-    communityTitle:"Kein Konzert mehr verpassen", communityBody:"Tritt unserer WhatsApp-Gruppe bei und erfahre als Erstes, wann das nächste Konzert stattfindet.", communityBtn:"WhatsApp-Gruppe beitreten",
-    footerTag:"Klassische Musik für die Kleinsten und ihre Familien.", footerGroup:"Updates in der WhatsApp-Gruppe"
-  },
   en: {
     navConcept:"Concept", navDate:"Date", navBring:"What to bring", navFaq:"FAQ", navSignup:"Sign up",
     navPrivacy:"Privacy", navImprint:"Imprint", navMusiker:"For Musicians",
@@ -476,7 +410,7 @@ const DATA = {
         {q:"What about bad weather?", a:"The concert takes place rain or shine! If the weather is bad, we simply move into the living room."}
       ]}
     ],
-    communityTitle:"Never miss a concert", communityBody:"Join our WhatsApp group and be the first to know when the next concert is happening.", communityBtn:"Join WhatsApp group",
+    communityTitle:"Never miss a concert", communityBody:"Join our WhatsApp group and be the first to know when the next concert is happening.", communityBtn:"Join WhatsApp group", communityHint:"Join our WhatsApp group for updates",
     footerTag:"Classical music for the littlest ears.", footerGroup:"Updates in our WhatsApp group"
   }
 };
@@ -485,8 +419,7 @@ const SIGNUP_LINK = "https://docs.google.com/spreadsheets/d/1lMjutfplj_h7Xr2mMD1
 const WA_GROUP_LINK = "https://chat.whatsapp.com/PLACEHOLDER"; // replace with real group link
 
 class Component extends DCLogic {
-  state = { lang: null };
-  get lang(){ return this.state.lang || this.props.defaultLang || "de"; }
+  get lang(){ return "en"; }
 
   rich(str){
     return String(str).split(/\*\*(.+?)\*\*/g).map((p,i) =>
@@ -497,13 +430,7 @@ class Component extends DCLogic {
   renderVals(){
     const lang = this.lang;
     const t = DATA[lang];
-    const active = lang === "de"
-      ? "background:#7c9069;color:#fff;padding:6px 13px;border:none;cursor:pointer;font-weight:700"
-      : "background:transparent;color:#6b6051;padding:6px 13px;border:none;cursor:pointer;font-weight:700";
-    const deActive = lang === "de";
-    const baseBtn = "padding:6px 13px;border:none;cursor:pointer;font-weight:700;font-size:13px;font-family:inherit";
-    const deBtnStyle = baseBtn + (deActive ? ";background:#7c9069;color:#fff" : ";background:transparent;color:#7a715f");
-    const enBtnStyle = baseBtn + (!deActive ? ";background:#7c9069;color:#fff" : ";background:transparent;color:#7a715f");
+    
 
     const features = t.features.map(f => ({ title:f.title, body:f.body }));
     const heroSubNode = this.rich(t.heroSub);
@@ -536,9 +463,7 @@ class Component extends DCLogic {
     }));
 
     return {
-      t, deBtnStyle, enBtnStyle,
-      setDe: () => this.setState({ lang:"de" }),
-      setEn: () => this.setState({ lang:"en" }),
+      t,
       features, bringItems, steps, nextDates, faqGroups,
       heroSubNode, conceptParas, signupBodyNode,
       signupLink: SIGNUP_LINK, groupLink: WA_GROUP_LINK
