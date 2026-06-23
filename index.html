@@ -324,6 +324,19 @@
       </div>
     </section>
 
+    <!-- WHATSAPP COMMUNITY -->
+    <section style="position:relative;background:#edf0e6;padding:60px 28px;overflow:hidden">
+      <img src="assets/bg_watercolor_sage_green.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.25;pointer-events:none">
+      <div style="position:relative;max-width:560px;margin:0 auto;text-align:center">
+        <div style="font-size:40px;margin-bottom:10px">💬</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:34px;color:#3f4a35;margin-bottom:10px">{{ t.communityTitle }}</h2>
+        <p style="font-size:16px;color:#5c5347;margin-bottom:24px;line-height:1.55">{{ t.communityBody }}</p>
+        <a href="{{ groupLink }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-weight:700;font-size:16px;padding:15px 30px;border-radius:999px;text-decoration:none;box-shadow:0 10px 24px -10px rgba(37,211,102,.5)">
+          <span style="font-size:18px">📱</span>{{ t.communityBtn }}
+        </a>
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <footer style="background:#f7f2e6;padding:50px 28px 60px;text-align:center">
       <img src="assets/decorative_divider.png" alt="" style="width:280px;max-width:80%;opacity:.85;margin-bottom:18px">
@@ -361,7 +374,7 @@ const DATA = {
     dateEyebrow:"Nächster Termin", dateTitle:"Wir sehen uns im Garten",
     dateWhen:"So, 12. Juli 2026", dateTime:"10:00 Uhr", datePlace:"München-Moosach", datePerformer:"Mit einer Opernsängerin",
     dateAddrLabel:"Privater Garten", dateAddrNote:"den genauen Treffpunkt schicken wir euch nach der Anmeldung.",
-    dateWeather:"Wir treffen uns nur bei schönem Wetter, dann wird es richtig gemütlich.",
+    dateWeather:"Bei schlechtem Wetter ziehen wir einfach ins Wohnzimmer um.",
     dateGetting:"Parken könnt ihr am Straßenende, Fahrräder stellt ihr direkt im Garten ab. Mit dem Bus 169 ab Bahnhof Moosach seid ihr in einem Kilometer da, sonntags fährt er alle 20 Minuten.",
     dateSeatsNum:"5 bis 8", dateSeatsLabel:"Familien", datePriceNum:"20 €", datePriceLabel:"pro Erwachsenem",
     dateKidsFree:"Kinder kostenlos",
@@ -398,9 +411,10 @@ const DATA = {
         {q:"Wo findet das Konzert statt?", a:"In einem privaten Garten in München-Moosach. Die genaue Adresse schicken wir euch nach der Anmeldung."},
         {q:"Was soll ich mitbringen?", a:"Eine eigene Krabbeldecke, etwas zu trinken und eure Wickelsachen. Bodenkissen, eine Wickelauflage und ein paar Snacks haben wir vor Ort für euch."},
         {q:"Kinderwagen, Parken und Anreise?", a:"Eure Kinderwagen stehen hinten im Garten, bei Regen in der Garage. Parken könnt ihr auf einem kleinen Parkplatz am Straßenende, Fahrräder kommen direkt in den Garten. Der Bus 169 fährt ab Bahnhof Moosach, sonntags alle 20 Minuten."},
-        {q:"Was ist bei schlechtem Wetter?", a:"Wir treffen uns nur bei gutem Wetter. Einen Raum drinnen als Ersatz haben wir leider nicht, dafür wird es bei Sonne umso schöner."}
+        {q:"Was ist bei schlechtem Wetter?", a:"Das Konzert findet trotzdem statt! Bei Regen ziehen wir einfach ins Wohnzimmer um."}
       ]}
     ],
+    communityTitle:"Kein Konzert mehr verpassen", communityBody:"Tritt unserer WhatsApp-Gruppe bei und erfahre als Erstes, wann das nächste Konzert stattfindet.", communityBtn:"WhatsApp-Gruppe beitreten",
     footerTag:"Klassische Musik für die Kleinsten und ihre Familien.", footerGroup:"Updates in der WhatsApp-Gruppe"
   },
   en: {
@@ -422,7 +436,7 @@ const DATA = {
     dateEyebrow:"Next concert", dateTitle:"See you in the garden",
     dateWhen:"Sun, 12 July 2026", dateTime:"10:00 am", datePlace:"Munich-Moosach", datePerformer:"With an opera singer",
     dateAddrLabel:"Private garden", dateAddrNote:"you'll receive the exact address after registering.",
-    dateWeather:"Takes place in good weather only.",
+    dateWeather:"If the weather is bad, we move into the living room.",
     dateGetting:"Parking at the end of the street, bike parking in the garden. Bus 169 from Moosach station (1 km), every 20 min on Sundays.",
     dateSeatsNum:"5 to 8", dateSeatsLabel:"families", datePriceNum:"€20", datePriceLabel:"per adult",
     dateKidsFree:"Kids free",
@@ -459,9 +473,10 @@ const DATA = {
         {q:"Where does the concert take place?", a:"In a private garden in Munich-Moosach. We'll send you the exact address after you register."},
         {q:"What should I bring?", a:"Your own play blanket, something to drink and your nappy-changing things. Floor cushions, a changing mat and a few snacks are there for you on site."},
         {q:"Stroller, parking and getting there?", a:"Strollers go at the back of the garden, or in the garage if it rains. There's a small car park at the end of the street, and bikes come straight into the garden. Bus 169 runs from Moosach station, every 20 minutes on Sundays."},
-        {q:"What about bad weather?", a:"We only meet in good weather. We don't have an indoor backup, but when the sun's out it's all the lovelier."}
+        {q:"What about bad weather?", a:"The concert takes place rain or shine! If the weather is bad, we simply move into the living room."}
       ]}
     ],
+    communityTitle:"Never miss a concert", communityBody:"Join our WhatsApp group and be the first to know when the next concert is happening.", communityBtn:"Join WhatsApp group",
     footerTag:"Classical music for the littlest ears.", footerGroup:"Updates in our WhatsApp group"
   }
 };
